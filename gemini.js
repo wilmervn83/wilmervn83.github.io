@@ -21,7 +21,7 @@ let response;
 const MODEL_NAME = "gemini-pro";
 
  
-    const genAI = new GoogleGenerativeAI("AIzaSyA0juWnC11tFsEX2uEHxLfDRECUfM7KysU");
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({ model: MODEL_NAME });
   
 // Función para completar el texto
